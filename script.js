@@ -42,7 +42,7 @@ window.addEventListener('load', function () {
         if(!li) return;
         const id = li.getAttribute('dataid');
         li.classList.toggle('completed');
-        tasks = tasks.map(task => task.id === Number(id) ? {...task,completed:true} : task);
+        tasks = tasks.map(task => task.id === Number(id) ? {...task,completed:!task.completed} : task);
         localStorage.setItem('tasks',JSON.stringify(tasks));
         
 
