@@ -33,7 +33,7 @@ window.addEventListener('load', function () {
             const li = e.target.closest('li');
             const id = li.getAttribute('dataid');
             li.remove();
-            tasks = tasks.filter(task => task.id !== id);
+            tasks = tasks.filter(task => task.id !== parseInt(id));
             localStorage.setItem('tasks',JSON.stringify(tasks));
             return;
         }
